@@ -1,0 +1,100 @@
+:root {
+    color-scheme: light dark;
+}
+
+* {
+    margin: 0;
+    border: 0;
+}
+
+body {
+    background-color: light-dark(white, black);
+    font-family: system-ui;
+}
+
+.wrapper {
+    display: grid;
+    place-items: center;
+    height: 100svh;
+}
+
+@property --card-bg {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #c0bae8;
+}
+@property --shine-1 {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #ffbbc0;
+}
+@property --shine-2 {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #c0aecb;
+}
+.card {
+    width: 25rem;
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 1rem;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    background: radial-gradient( 300px circle at 55% 60% in oklab, var(--shine-2), transparent 100% 100% ), radial-gradient( farthest-side circle at 75% 30% in oklab, var(--shine-1) 0%, var(--card-bg) 100%);
+    background-blend-mode: color-burn;
+    animation: fade-in 1s ease-in-out, animate-color-1 4s infinite linear alternate, 4s animate-color-2 1s infinite linear alternate;
+}
+@keyframes fade-in {
+    0%, 100% { transform: none; }
+    50% { transform: scale(1.05); }
+}
+@keyframes animate-color-1 {
+    from { --shine-1: initial; }
+    to { --shine-1: orange; }
+}
+@keyframes animate-color-2 {
+    from { --shine-2: initial; }
+    to { --shine-2: hotpink; }
+}
+
+h1 {
+    font-size: 2.4rem;
+    color: white;
+}
+input {
+    font-size: 1.2rem;
+    width: 60%;
+    border-radius: .5rem;
+    background-color: white;
+    color: black;
+    padding: .4rem;
+}
+button {
+    width: 40%;
+    height: 2.4rem;
+    background-color: white;
+    color: black;
+    font-size: .9rem;
+    font-weight: 500;
+    border-radius: 1rem;
+    font-family: inherit;
+    transition: 200ms ease-in-out;
+
+    &#google {
+        background-color: tomato;
+        color: white;
+    }
+
+    &:hover {
+        transform: scale(.9, 1.1);
+    }
+    &:active {
+        transform: scale(1, .8);
+    }
+}
+a {
+    color: darkblue;
+}
