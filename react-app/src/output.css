@@ -107,7 +107,7 @@
 }
 
 /*
-! tailwindcss v3.4.15 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -558,104 +558,32 @@ video {
   position: fixed;
 }
 
-.absolute {
-  position: absolute;
-}
-
-.relative {
-  position: relative;
-}
-
 .flex {
   display: flex;
-}
-
-.aspect-square {
-  aspect-ratio: 1 / 1;
 }
 
 .h-10 {
   height: 2.5rem;
 }
 
-.h-\[100svh\] {
-  height: 100svh;
-}
-
-.h-\[30\%\] {
-  height: 30%;
-}
-
-.h-\[70\%\] {
-  height: 70%;
-}
-
 .w-10 {
   width: 2.5rem;
-}
-
-.w-96 {
-  width: 24rem;
 }
 
 .w-\[100\%\] {
   width: 100%;
 }
 
-.w-\[100vw\] {
-  width: 100vw;
-}
-
-.flex-shrink-0 {
-  flex-shrink: 0;
-}
-
-.snap-x {
-  scroll-snap-type: x var(--tw-scroll-snap-strictness);
-}
-
-.snap-proximity {
-  --tw-scroll-snap-strictness: proximity;
-}
-
-.snap-center {
-  scroll-snap-align: center;
-}
-
-.flex-col {
-  flex-direction: column;
-}
-
 .items-center {
   align-items: center;
-}
-
-.justify-start {
-  justify-content: flex-start;
 }
 
 .justify-between {
   justify-content: space-between;
 }
 
-.gap-12 {
-  gap: 3rem;
-}
-
 .gap-4 {
   gap: 1rem;
-}
-
-.overflow-x-scroll {
-  overflow-x: scroll;
-}
-
-.text-wrap {
-  text-wrap: wrap;
-}
-
-.rounded-3xl {
-  border-radius: 1.5rem;
 }
 
 .rounded-xl {
@@ -680,11 +608,6 @@ video {
   border-color: rgb(39 39 42 / var(--tw-border-opacity, 1));
 }
 
-.bg-emerald-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(52 211 153 / var(--tw-bg-opacity, 1));
-}
-
 .bg-rose-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(253 164 175 / var(--tw-bg-opacity, 1));
@@ -699,18 +622,9 @@ video {
   padding: 0.5rem;
 }
 
-.p-4 {
-  padding: 1rem;
-}
-
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-}
-
-.px-\[40\%\] {
-  padding-left: 40%;
-  padding-right: 40%;
 }
 
 .py-2 {
@@ -718,27 +632,6 @@ video {
   padding-bottom: 0.5rem;
 }
 
-.font-sans {
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
-}
-
-.drop-shadow-\[0_1\.2px_1\.2px_rgb\(255\2c 255\2c 255\)\] {
-  --tw-drop-shadow: drop-shadow(0 1.2px 1.2px rgb(255,255,255));
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
 .hover\:border-dashed:hover {
   border-style: dashed;
-}
-
-@media (prefers-color-scheme: dark) {
-  .dark\:bg-black {
-    --tw-bg-opacity: 1;
-    background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
-  }
 }
