@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+import { getAuth, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBp2Xt-6o12a8aRZBmHJGZtbhHCbda8CAc",
@@ -16,20 +16,20 @@ const auth = getAuth(app);
 auth.languageCode = "en";
 const provider = new GoogleAuthProvider();
 
-const submitSignUp = document.getElementById("submit");
-submitSignUp.addEventListener("click", function(event) {
+const submitSignIn = document.getElementById("submit");
+submitSignIn.addEventListener("click", function(event) {
     event.preventDefault(); // stops page from refreshing
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
-    createUserWithEmailAndPassword(auth, email, password)
+    signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             const user = userCredential.user;
-            window.location.href = "../../index.html";
+            window.location.href = "../index.html";
         }).catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
-            console.log(errorMessage);
+            alert(errorMessage);
         });
 });
 
@@ -39,10 +39,10 @@ googleLogin.addEventListener("click", function() {
         .then((result) => {
             const credential = GoogleAuthProvider.credentialFromResult(result);
             const user = result.user;
-            window.location.href = "../../index.html";
+            window.location.href = "../index.html";
         }).catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
-            console.log(errorMessage);
+            alert(errorMessage);
         });
 });
